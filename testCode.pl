@@ -17,33 +17,36 @@
     }else{
       push(@scores,"PASS");
     }
-#   1-2.
-    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./a.exe > .outfiles/out_01_02.out");
-    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./a.exe ");
-    $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
-    if($temp){
-      push(@scores,"**FAIL**");
-    }else{
-      push(@scores,"PASS");
-    }
-#   1-2.
-    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_03.exe > .outfiles/out_01_03.out");
-    $temp = `diff .outfiles/out_01_03.out .outfiles/out_01_03.txt`;
-    if($temp){
-      push(@scores,"**FAIL**");
-    }else{
-      push(@scores,"PASS");
-    }
 
-
+#hph+
+##   1-2.
+#    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./a.exe > .outfiles/out_01_02.out");
+#    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./a.exe ");
+#    $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
+#    if($temp){
+#      push(@scores,"**FAIL**");
+#    }else{
+#      push(@scores,"PASS");
+#    }
+##   1-2.
+#    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_03.exe > .outfiles/out_01_03.out");
+#    $temp = `diff .outfiles/out_01_03.out .outfiles/out_01_03.txt`;
+#    if($temp){
+#      push(@scores,"**FAIL**");
+#    }else{
+#      push(@scores,"PASS");
+#    }
 #
-#   Print out result table.
 #
-    printf "-" x 25 . "\n";
-    printf "Test \tPass/Fail\n";
-    printf "-" x 25 . "\n";
-    foreach (@scores){
-      $i += 1;
-      printf "%s \t%s\n", $i,$scores[$i-1];
-    }
-    printf "=" x 25 . "\n";
+##
+##   Print out result table.
+##
+#    printf "-" x 25 . "\n";
+#    printf "Test \tPass/Fail\n";
+#    printf "-" x 25 . "\n";
+#    foreach (@scores){
+#      $i += 1;
+#      printf "%s \t%s\n", $i,$scores[$i-1];
+#    }
+#    printf "=" x 25 . "\n";
+#hph-

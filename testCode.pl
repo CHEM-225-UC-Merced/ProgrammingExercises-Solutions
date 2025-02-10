@@ -11,6 +11,9 @@
 #
 #   1-1.
     system("echo input_01_01.txt | ./prgm_01_01.exe >& .outfiles/out_01_01.out");
+
+    system("echo Trying to run the program...");
+    system("echo input_01_01.txt | ./prgm_01_01.exe");
     system("echo ls -a:");
     system("ls -a");
     system("echo ls .outfiles/:");

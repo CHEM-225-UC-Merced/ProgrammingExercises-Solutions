@@ -15,6 +15,10 @@
     system("ls -a");
     system("echo ls .outfiles/:");
     system("ls .outfiles/");
+    system("echo pwd:");
+    system("pwd");
+
+
     $temp = `diff .outfiles/out_01_01.out .outfiles/out_01_01.txt`;
     if($temp){
       push(@scores,"**FAIL**");

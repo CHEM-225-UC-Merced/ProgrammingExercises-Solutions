@@ -19,6 +19,7 @@
     }
 #   1-2.
     system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./a.exe > .outfiles/out_01_02.out");
+    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./a.exe ");
     $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
     if($temp){
       push(@scores,"**FAIL**");

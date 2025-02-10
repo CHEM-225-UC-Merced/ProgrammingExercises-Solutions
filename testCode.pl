@@ -11,8 +11,8 @@
 #
 #   1-1.
     system("echo input_01_01.txt | ./prgm_01_01.exe >& .outfiles/out_01_01.out");
-    system("echo ls:");
-    system("ls");
+    system("echo ls -a:");
+    system("ls -a");
     $temp = `diff .outfiles/out_01_01.out .outfiles/out_01_01.txt`;
     if($temp){
       push(@scores,"**FAIL**");

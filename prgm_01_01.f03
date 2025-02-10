@@ -4,6 +4,10 @@
 !     file is opened and read, it is closed and then printed.
 !
 !
+!     H. P. Hratchian
+!     hhratchian@ucmerced.edu
+!
+!
       implicit none
       integer,parameter::inFileUnitA=10
       integer::errorFlag,i
@@ -53,7 +57,9 @@
 !
       write(*,*)' Printing Matrix'
 !
-      ADD CODE HERE
+      do i = 1,3
+        write(*,1000) matrix(i,:)
+      endDo
 !
 !
       return

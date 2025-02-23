@@ -15,7 +15,7 @@
 #
 #   Build the test table results array for the requested problem.
 #
-    if($problemNumber.eq.1){
+    if($problemNumber == 1){
 #     Programming Exercise 1.
 #
 #     1-1.

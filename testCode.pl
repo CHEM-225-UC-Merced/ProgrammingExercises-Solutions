@@ -9,43 +9,44 @@
 #   hhratchian@ucmerced.edu
 #
 #
-#   Programming Exercise 1.
+#   Default the problem number.
 #
-#   1-1.
-#hph    system("echo input_01_01.txt | ./prgm_01_01.exe > .outfiles/out_01_01.out");
-    system("printf 'input_01_01.txt\n' | ./prgm_01_01.exe > .outfiles/out_01_01.out");
-    $temp = `diff .outfiles/out_01_01.out .outfiles/out_01_01.txt`;
-    print "Hrant - test 1: diff:\n$temp\n***DONE***\n\n";
-    if($temp){
-      push(@scores,"**FAIL**");
+    $problemNumber = 1;
+#
+#   Build the test table results array for the requested problem.
+#
+    if($problemNumber.eq.1){
+#     Programming Exercise 1.
+#
+#     1-1.
+      system("printf 'input_01_01.txt\n' | ./prgm_01_01.exe > .outfiles/out_01_01.out");
+      $temp = `diff .outfiles/out_01_01.out .outfiles/out_01_01.txt`;
+      if($temp){
+        push(@scores,"**FAIL**");
+      }else{
+        push(@scores,"PASS");
+      }
+#
+#     1-2.
+      system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_02.exe > .outfiles/out_01_02.out");
+      $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
+      if($temp){
+        push(@scores,"**FAIL**");
+      }else{
+        push(@scores,"PASS");
+      }
+#
+#     1-3.
+      system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_03.exe > .outfiles/out_01_03.out");
+      $temp = `diff .outfiles/out_01_03.out .outfiles/out_01_03.txt`;
+      if($temp){
+        push(@scores,"**FAIL**");
+      }else{
+        push(@scores,"PASS");
+      }
     }else{
-      push(@scores,"PASS");
+      die "\n\nUnknown problem number requested.\n\n";
     }
-#   1-2.
-    print "\n\nHrant - Here is the text in input_01_02.txt...\n";
-    $zzz = `cat input_01_02.txt`;
-    print "$zzz\n***DONE***\n\n";
-#hph    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_02.exe > .outfiles/out_01_02.out");
-    system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_02.exe > .outfiles/out_01_02.out");
-    $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
-    print "Hrant - test 2: diff:\n$temp\n***DONE***\n\n";
-    if($temp){
-      push(@scores,"**FAIL**");
-    }else{
-      push(@scores,"PASS");
-    }
-#   1-2.
-#    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_03.exe > .outfiles/out_01_03.out");
-    system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_03.exe > .outfiles/out_01_03.out");
-    $temp = `diff .outfiles/out_01_03.out .outfiles/out_01_03.txt`;
-    print "Hrant - test 3: diff:\n$temp\n***DONE***\n\n";
-    if($temp){
-      push(@scores,"**FAIL**");
-    }else{
-      push(@scores,"PASS");
-    }
-
-
 #
 #   Print out result table.
 #

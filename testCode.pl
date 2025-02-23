@@ -22,6 +22,9 @@
       push(@scores,"PASS");
     }
 #   1-2.
+    print "\n\nHrant - Here is the text in input_01_02.txt...\n";
+    $zzz = `cat input_01_02.txt`;
+    print "$zzz\n***DONE***\n\n";
     system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_02.exe > .outfiles/out_01_02.out");
     $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
     print "Hrant - test 2: diff:\n$temp\n***DONE***\n\n";

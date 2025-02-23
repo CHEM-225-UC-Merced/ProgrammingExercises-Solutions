@@ -35,7 +35,8 @@
       push(@scores,"PASS");
     }
 #   1-2.
-    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_03.exe > .outfiles/out_01_03.out");
+#    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_03.exe > .outfiles/out_01_03.out");
+    system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_03.exe > .outfiles/out_01_03.out");
     $temp = `diff .outfiles/out_01_03.out .outfiles/out_01_03.txt`;
     print "Hrant - test 3: diff:\n$temp\n***DONE***\n\n";
     if($temp){

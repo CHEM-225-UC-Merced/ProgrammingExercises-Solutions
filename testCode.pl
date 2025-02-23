@@ -12,8 +12,10 @@
 #   Programming Exercise 1.
 #
 #   1-1.
-    system("echo input_01_01.txt | ./prgm_01_01.exe > .outfiles/out_01_01.out");
+#hph    system("echo input_01_01.txt | ./prgm_01_01.exe > .outfiles/out_01_01.out");
+    system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_02.exe > .outfiles/out_01_02.out");
     $temp = `diff .outfiles/out_01_01.out .outfiles/out_01_01.txt`;
+    print "Hrant - test 1: diff:\n$temp\n***DONE***\n\n";
     if($temp){
       push(@scores,"**FAIL**");
     }else{
@@ -22,6 +24,7 @@
 #   1-2.
     system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_02.exe > .outfiles/out_01_02.out");
     $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
+    print "Hrant - test 2: diff:\n$temp\n***DONE***\n\n";
     if($temp){
       push(@scores,"**FAIL**");
     }else{
@@ -30,6 +33,7 @@
 #   1-2.
     system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_03.exe > .outfiles/out_01_03.out");
     $temp = `diff .outfiles/out_01_03.out .outfiles/out_01_03.txt`;
+    print "Hrant - test 3: diff:\n$temp\n***DONE***\n\n";
     if($temp){
       push(@scores,"**FAIL**");
     }else{

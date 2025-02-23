@@ -13,7 +13,7 @@
 #
 #   1-1.
 #hph    system("echo input_01_01.txt | ./prgm_01_01.exe > .outfiles/out_01_01.out");
-    system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_02.exe > .outfiles/out_01_02.out");
+    system("printf 'input_01_01.txt\n' | ./prgm_01_01.exe > .outfiles/out_01_01.out");
     $temp = `diff .outfiles/out_01_01.out .outfiles/out_01_01.txt`;
     print "Hrant - test 1: diff:\n$temp\n***DONE***\n\n";
     if($temp){
@@ -25,7 +25,8 @@
     print "\n\nHrant - Here is the text in input_01_02.txt...\n";
     $zzz = `cat input_01_02.txt`;
     print "$zzz\n***DONE***\n\n";
-    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_02.exe > .outfiles/out_01_02.out");
+#hph    system("echo -e \"input_01_01.txt\ninput_01_02.txt\" | ./prgm_01_02.exe > .outfiles/out_01_02.out");
+    system("printf 'input_01_01.txt\ninput_01_02.txt\n' | ./prgm_01_02.exe > .outfiles/out_01_02.out");
     $temp = `diff .outfiles/out_01_02.out .outfiles/out_01_02.txt`;
     print "Hrant - test 2: diff:\n$temp\n***DONE***\n\n";
     if($temp){
